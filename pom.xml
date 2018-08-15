@@ -86,14 +86,11 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			
-			<!--
-                        JavaDoc generation.
-                        JavaDoc is generated during pre-site phase.
-                        -->
+			<!-- JavaDoc generation: JavaDoc is generated during pre-site phase.  -->
                        	<plugin>
                           	<groupId>org.apache.maven.plugins</groupId>
                         	<artifactId>maven-javadoc-plugin</artifactId>
-                        	<version>2.9.1</version>
+                        	<version>3.0.1</version>
                         		<executions>
                             			<execution>
                                 			<phase>pre-site</phase>
@@ -104,6 +101,7 @@
                         		</executions>
                         		<configuration>
                             			<show>private</show>
+						<nohelp>true</nohelp>
                         		</configuration>
                     	</plugin>
 			
