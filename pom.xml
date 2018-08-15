@@ -23,6 +23,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<docker.image.prefix>canon-poc</docker.image.prefix>
+		<dir>${project.build.directory}</dir>
 	</properties>
 
 	<dependencies>
@@ -102,7 +103,8 @@
                         		<configuration>
                             			<show>private</show>
 						<nohelp>true</nohelp>
-						<outputDirectory>target/build</outputDirectory>
+						<!-- <outputDirectory>target/build</outputDirectory>  -->  
+						 <outputDirectory>${dir}/build</outputDirectory>
                         		</configuration>
                     	</plugin>
 			
