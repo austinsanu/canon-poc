@@ -102,6 +102,7 @@
                         		<configuration>
                             			<show>private</show>
 						<nohelp>true</nohelp>
+						<outputDirectory>target/build</outputDirectory>
                         		</configuration>
                     	</plugin>
 			
