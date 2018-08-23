@@ -107,7 +107,7 @@
 						 <outputDirectory>${dir}/build</outputDirectory>
                         		</configuration>
                     	</plugin>
-			
+			<!-- 
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>dockerfile-maven-plugin</artifactId>
@@ -119,14 +119,15 @@
 					</buildArgs>
 				</configuration>
 			</plugin>
-
+                         -->
 			<!-- war file generation -2018-08-23  Starts -->
 			<plugin>
         			<groupId>org.apache.maven.plugins</groupId>
         			<artifactId>maven-war-plugin</artifactId>
         			<version>3.2.2</version>
         			<configuration>
-          				<webappDirectory>/sample/servlet/container/deploy/directory</webappDirectory>
+          			<!--	<webappDirectory>/sample/servlet/container/deploy/directory</webappDirectory>  -->
+					<WAR-FILE>target/${project.build.finalName}.war</WAR-FILE>
         			</configuration>
       			</plugin>
 			<!--           ends 2018-08-23               -->
