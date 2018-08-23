@@ -120,6 +120,17 @@
 				</configuration>
 			</plugin>
 
+			<!-- war file generation -2018-08-23 -- Starts -->
+			<plugin>
+        			<groupId>org.apache.maven.plugins</groupId>
+        			<artifactId>maven-war-plugin</artifactId>
+        			<version>3.2.2</version>
+        			<configuration>
+          				<webappDirectory>/sample/servlet/container/deploy/directory</webappDirectory>
+        			</configuration>
+      			</plugin>
+			<!--   ends 2018-08-23 ----------------------              -->
+
 		</plugins>
 	</build>
 
