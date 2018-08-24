@@ -108,10 +108,13 @@
                             			</execution>
                         		</executions>
                         		<configuration>
+						<sourceFileIncludes>
+           						 <sourceFileInclude>**/*.java</sourceFileInclude>
+        					</sourceFileIncludes>
                             			<show>private</show>
 						<nohelp>true</nohelp>
 						<!-- <outputDirectory>target/build</outputDirectory>  -->  
-						 <outputDirectory>target/</outputDirectory>
+						 <outputDirectory>target</outputDirectory>
                         		</configuration>
                     	</plugin>
 			<!-- 
