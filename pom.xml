@@ -99,7 +99,7 @@
                             			<execution>
                                 			<phase>site</phase>
                                 				<goals>
-                                    					<goal>javadoc</goal>
+                                    					<goal>javadoc:jar</goal>
                                 				</goals>
                             			</execution>
                         		</executions>
