@@ -99,14 +99,7 @@
                           	<groupId>org.apache.maven.plugin-tools</groupId>
                         	<artifactId>maven-plugin-tools-javadoc</artifactId>
                         	<version>3.5.2</version>
-                        		<executions>
-                            			<execution>
-                                			<phase>pre-site</phase>
-                                				<goals>
-                                    					<goal>javadoc</goal>
-                                				</goals>
-                            			</execution>
-                        		</executions>
+                        		
                         		<configuration>
 						<sourceFileIncludes>
            						 <sourceFileInclude>**/*.java</sourceFileInclude>
@@ -115,6 +108,7 @@
 						<nohelp>true</nohelp>
 						<!-- <outputDirectory>target/build</outputDirectory>  -->  
 						 <outputDirectory>target</outputDirectory>
+						
                         		</configuration>
                     	</plugin>
 			<!-- 
