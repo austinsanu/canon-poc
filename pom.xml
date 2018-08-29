@@ -78,11 +78,7 @@
   			<version>3.0.1</version>
   			<type>maven-plugin</type>
 		</dependency>
-		<dependency>
-  			<groupId>org.apache.maven.plugin-tools</groupId>
-  			<artifactId>maven-plugin-tools-javadoc</artifactId>
-  			<version>3.5.2</version>
-		</dependency>
+		
 	</dependencies>
 
 
@@ -146,19 +142,4 @@
 		</plugins>
 	</build>
 	
-	  <reporting>
-    			<plugins>
-	      			<plugin>
-       					 <groupId>org.apache.maven.plugins</groupId>
-        				<artifactId>maven-javadoc-plugin</artifactId>
-        				<version>3.0.1</version>
-        				<configuration>
-          				<!--	<stylesheetfile>${basedir}/src/main/javadoc/stylesheet.css</stylesheetfile>   -->
-          					<show>public</show>
-        				</configuration>
-      				</plugin>
-    			</plugins>
-  	</reporting>
-
-
 </project>
