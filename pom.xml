@@ -122,6 +122,14 @@
 
 		</plugins>
 	</build>
+	
+	<distributionManagement>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>austinsanu-snapshots</name>
+        <url>https://austinsanu.jfrog.io/austinsanu/libs-snapshot-local</url>
+    </snapshotRepository>
+</distributionManagement>
 
 
 
