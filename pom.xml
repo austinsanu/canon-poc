@@ -175,6 +175,4 @@
         		<url>https://austinsanu.jfrog.io/austinsanu/libs-snapshot-local</url>
     		</snapshotRepository>
 	</distributionManagement>
-
-	
 </project>
