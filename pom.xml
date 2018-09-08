@@ -138,6 +138,33 @@
         			</configuration>
       			</plugin>
 			<!--           ends 2018-08-23               -->
+			<!--           start 2018-09-07               -->
+			<plugin>
+            			<groupId>org.jfrog.buildinfo</groupId>
+            			<artifactId>artifactory-maven-plugin</artifactId>
+            			<version>2.4.0</version>
+            			<inherited>false</inherited>
+            			<executions>
+                			<execution>
+                    				<id>build-info</id>
+                    				<goals>
+                        				<goal>publish</goal>
+                    				</goals>
+                    			<configuration>
+                        			<publisher>
+                            				<contextUrl>https://austinsanu.jfrog.io/austinsanu</contextUrl>
+                            				<repoKey>libs-release-local</repoKey>
+                            				<snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
+                            				<username>austinsanu</username>
+                            				<password>A12qw34er!</password>
+                        			</publisher>
+                    			</configuration>
+                			</execution>
+            			</executions>
+        		</plugin>
+			<!--           ends 2018-09-07               -->
+			
+			
 		</plugins>
 	</build>
 	
