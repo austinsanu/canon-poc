@@ -6,7 +6,8 @@
 	<groupId>com.canon</groupId>
 	<artifactId>canon-poc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<!-- <packaging>jar</packaging>   -->
+	<packaging>war</packaging>
 
 	<name>canon-poc</name>
 	<description>POC project for CI/CD and docker</description>
@@ -112,7 +113,7 @@
 						 <outputDirectory>${dir}/build</outputDirectory>
                         		</configuration>
                     	</plugin>
-			
+			<!-- 
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>dockerfile-maven-plugin</artifactId>
@@ -124,6 +125,16 @@
 					</buildArgs>
 				</configuration>
 			</plugin>
+			-->
+			<plugin>
+        			<groupId>org.apache.maven.plugins</groupId>
+        			<artifactId>maven-war-plugin</artifactId>
+        			<version>3.2.2</version>
+        			<configuration>
+          			<!--	<webappDirectory>/sample/servlet/container/deploy/directory</webappDirectory>  -->
+					<WAR-FILE>target/${project.build.finalName}.war</WAR-FILE>
+        			</configuration>
+      			</plugin>
 
 		</plugins>
 	</build>
