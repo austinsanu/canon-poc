@@ -106,7 +106,7 @@
                         		<configuration>
                             			<show>private</show>
 						<nohelp>true</nohelp>
-						<outputDirectory>target/build</outputDirectory> 
+						<outputDirectory>target</outputDirectory> 
 						<!--  <outputDirectory>${dir}/build</outputDirectory> -->
                         		</configuration>
                     	</plugin>
