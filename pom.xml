@@ -9,7 +9,6 @@
 	<!-- <packaging>jar</packaging>  -->
 	<packaging>war</packaging>
 	
-
 	<name>canon-poc</name>
 	<description>POC project for CI/CD and docker</description>
 
@@ -77,11 +76,8 @@
   			<artifactId>maven-javadoc-plugin</artifactId>
   			<version>3.0.1</version>
   			<type>maven-plugin</type>
-		</dependency>
-		
+		</dependency>		
 	</dependencies>
-
-
 
 	<build>
 		<plugins>
@@ -110,10 +106,7 @@
 						<destDir>apiDocs</destDir>
 						<!--  <outputDirectory>${dir}/build</outputDirectory> -->
                         		</configuration>
-                    	</plugin>
-			
-			
-			
+                    	</plugin>	
 			
 			<!-- 
 			<plugin>
@@ -139,6 +132,7 @@
         			</configuration>
       			</plugin>
 			<!--           ends 2018-08-23               -->
+			
 			<!--           start 2018-09-07               -->
 			<plugin>
             			<groupId>org.jfrog.buildinfo</groupId>
