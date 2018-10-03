@@ -6,9 +6,9 @@
 	<groupId>com.canon</groupId>
 	<artifactId>canon-poc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<!-- <packaging>jar</packaging>   -->
+	<!-- <packaging>jar</packaging>  -->
 	<packaging>war</packaging>
-
+	
 	<name>canon-poc</name>
 	<description>POC project for CI/CD and docker</description>
 
@@ -76,15 +76,8 @@
   			<artifactId>maven-javadoc-plugin</artifactId>
   			<version>3.0.1</version>
   			<type>maven-plugin</type>
-		</dependency>
-		<dependency>
-      			<groupId>org.jfrog.buildinfo</groupId>
-      			<artifactId>build-info-extractor</artifactId>
-      			<version>2.5.2</version>
-    		</dependency>
+		</dependency>		
 	</dependencies>
-
-
 
 	<build>
 		<plugins>
@@ -92,7 +85,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			
+					
 			<!-- JavaDoc generation: JavaDoc is generated during pre-site phase.  -->
                        	<plugin>
                           	<groupId>org.apache.maven.plugins</groupId>
@@ -100,19 +93,21 @@
                         	<version>3.0.1</version>
                         		<executions>
                             			<execution>
-                                			<phase>pre-site</phase>
+                                			<phase>site</phase>
                                 				<goals>
-                                    					<goal>javadoc</goal>
+                                    					<goal>javadoc:jar</goal>
                                 				</goals>
                             			</execution>
                         		</executions>
                         		<configuration>
                             			<show>private</show>
 						<nohelp>true</nohelp>
-						<!-- <outputDirectory>target/build</outputDirectory>  -->  
-						 <outputDirectory>${dir}/build</outputDirectory>
+						<reportOutputDirectory>target</reportOutputDirectory> 
+						<destDir>apiDocs</destDir>
+						<!--  <outputDirectory>${dir}/build</outputDirectory> -->
                         		</configuration>
-                    	</plugin>
+                    	</plugin>	
+			
 			<!-- 
 			<plugin>
 				<groupId>com.spotify</groupId>
@@ -125,7 +120,8 @@
 					</buildArgs>
 				</configuration>
 			</plugin>
-			-->
+                         -->
+			<!-- war file generation -2018-08-23  Starts -->
 			<plugin>
         			<groupId>org.apache.maven.plugins</groupId>
         			<artifactId>maven-war-plugin</artifactId>
@@ -135,18 +131,43 @@
 					<WAR-FILE>target/${project.build.finalName}.war</WAR-FILE>
         			</configuration>
       			</plugin>
-
+			<!--           ends 2018-08-23               -->
+			
+			<!--           start 2018-09-07               -->
+			<plugin>
+            			<groupId>org.jfrog.buildinfo</groupId>
+            			<artifactId>artifactory-maven-plugin</artifactId>
+            			<version>2.4.0</version>
+            			<inherited>false</inherited>
+            			<executions>
+                			<execution>
+                    				<id>build-info</id>
+                    				<goals>
+                        				<goal>publish</goal>
+                    				</goals>
+                    			<configuration>
+                        			<publisher>
+                            				<contextUrl>https://austinsanu.jfrog.io/austinsanu</contextUrl>
+                            				<repoKey>libs-release-local</repoKey>
+                            				<snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
+                            				<username>austinsanu</username>
+                            				<password>A12qw34er!</password>
+                        			</publisher>
+                    			</configuration>
+                			</execution>
+            			</executions>
+        		</plugin>
+			<!--           ends 2018-09-07        -->
+			
+			
 		</plugins>
 	</build>
 	
 	<distributionManagement>
-    <snapshotRepository>
-        <id>snapshots</id>
-        <name>austinsanu-snapshots</name>
-        <url>https://austinsanu.jfrog.io/austinsanu/libs-snapshot-local</url>
-    </snapshotRepository>
-</distributionManagement>
-
-
-
+    		<snapshotRepository>
+        		<id>snapshots</id>
+        		<name>austinsanu-snapshots</name>
+        		<url>https://austinsanu.jfrog.io/austinsanu/libs-snapshot-local</url>
+    		</snapshotRepository>
+	</distributionManagement>
 </project>
