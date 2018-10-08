@@ -11,7 +11,6 @@ public class CanonPocApplicationTests {
 
 	@Test
 	public void contextLoads() {
-		public int= "12345";
 	}
 
 }
