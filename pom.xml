@@ -134,6 +134,7 @@
 			<!--           ends 2018-08-23               -->
 			
 			<!--           start 2018-09-07               -->
+			<!-- commende on 20181008 starts
 			<plugin>
             			<groupId>org.jfrog.buildinfo</groupId>
             			<artifactId>artifactory-maven-plugin</artifactId>
@@ -156,9 +157,9 @@
                     			</configuration>
                 			</execution>
             			</executions>
-        		</plugin>
+        		</plugin> 
+				ends 20181008 --> 
 			<!--           ends 2018-09-07        -->
-			
 			
 		</plugins>
 	</build>
