@@ -163,7 +163,7 @@
 			
 		</plugins>
 	</build>
-	
+	<!-- commented in 20181008 
 	<distributionManagement>
     		<snapshotRepository>
         		<id>snapshots</id>
@@ -171,4 +171,5 @@
         		<url>https://austinsanu.jfrog.io/austinsanu/libs-snapshot-local</url>
     		</snapshotRepository>
 	</distributionManagement>
+         end 20181008 -->
 </project>
