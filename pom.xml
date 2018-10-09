@@ -12,7 +12,6 @@
 	<name>canon-poc</name>
 	<description>POC project for CI/CD and docker</description>
 
-	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
