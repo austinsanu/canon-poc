@@ -27,6 +27,7 @@
 		<dir>${project.build.directory}</dir>
 	</properties>
 
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
