@@ -3,8 +3,7 @@
 # canon-poc Test on 2018-0817 @  4.37 PM EST
 # canon-poc Test on 2018-0820 @  9.15 AM EST
 # canon-poc Test on 2018-0911 @ 12.49 AM EST
-# canon-poc Test on 2018-0911 @  1:20 AM EST
-# canon-poc Test on 2018-1003 @  9.09 AM EST
-# canon-poc Test on 2018-1009 @ 11.30 AM EST
-# canon-poc Test on 2018-1009 @  2.57 PM EST
-
+# canon-poc Test on 2018-0911 @   1:20 AM EST
+# canon-poc Test on 2018-1003 @ 9.09 AM EST
+# canon-poc Test on 2018-1009 @ 11.32 AM EST
+# canon-poc Test on 2018-1009 @ 11.37 AM EST
