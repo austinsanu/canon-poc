@@ -5,3 +5,4 @@
 # canon-poc Test on 2018-0911 @ 12.49 AM EST
 # canon-poc Test on 2018-0911 @   1:20 AM EST
 # canon-poc Test on 2018-1003 @ 9.09 AM EST
+updated readme file 20181010 @ 12.15 AM
