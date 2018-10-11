@@ -77,7 +77,14 @@
   			<artifactId>maven-javadoc-plugin</artifactId>
   			<version>3.0.1</version>
   			<type>maven-plugin</type>
-		</dependency>		
+		</dependency>
+		<!-- Added on 20181010 start -->
+		<dependency>
+   			<groupId>org.kohsuke</groupId>
+   			<artifactId>github-api</artifactId>
+   			<version>1.93</version>
+		</dependency>
+		<!-- Added on 20181010 ends -->
 	</dependencies>
 
 	<build>
