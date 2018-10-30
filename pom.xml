@@ -156,10 +156,10 @@
                     				</goals>
                     			<configuration>
                         			<publisher>
-                            				<contextUrl>https://austinsanu.jfrog.io/austinsanu</contextUrl>
+                            				<contextUrl>https://smathew.jfrog.io/smathew</contextUrl>
                             				<repoKey>libs-release-local</repoKey>
                             				<snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
-                            				<username>austinsanu</username>
+                            				<username>admin</username>
                             				<password>A12qw34er!</password>
                         			</publisher>
                     			</configuration>
@@ -175,8 +175,8 @@
 	<distributionManagement>
     		<snapshotRepository>
         		<id>snapshots</id>
-        		<name>austinsanu-snapshots</name>
-        		<url>https://austinsanu.jfrog.io/austinsanu/libs-snapshot-local</url>
+        		<name>smathew-snapshots</name>
+        		<url>https://smathew.jfrog.io/smathew/libs-snapshot-local</url>
     		</snapshotRepository>
 	</distributionManagement>
          end 20181008 -->
