@@ -11,9 +11,7 @@ public class CanonPocApplicationTests {
 
 	@Test
 	public void contextLoads() {
-		int a = 1;
-		int b = 2;
-		assertTrue(a + b ==3);
+		
 	}
 
 }
