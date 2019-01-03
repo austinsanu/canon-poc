@@ -1,4 +1,4 @@
-Pipeline {
+pipeline {
  agent any
  def rtMaven.tool = 'M2'
  stages 
