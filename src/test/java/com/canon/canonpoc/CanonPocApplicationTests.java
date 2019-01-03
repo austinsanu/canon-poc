@@ -14,7 +14,7 @@ public class CanonPocApplicationTests {
 	public void contextLoads() {
 		int a = 1;
 		int b = 2;
-		assertTrue(a + b == 3);
+		assertTrue(a + b == 5);
 	}
 
 }
