@@ -6,7 +6,8 @@ pipeline {
 	   stage('Access GitHub') 
      { 		 steps {
                 	sh "echo 'Accessing GitHub ...'"
-                	git url: 'https://github.com/austinsanu/canon-poc.git', branch: '2018-November-Sprint'
+                	// git url: 'https://github.com/austinsanu/canon-poc.git', branch: '2018-November-Sprint'
+	     		git url: 'https://github.com/austinsanu/canon-poc.git', branch: 'Test'
 		        }
      }
       
