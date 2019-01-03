@@ -1,1 +1,9 @@
 # config.yml file 2018-12-27
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image:circleci/node:4.8
+    steps:
+      - checkout
+      - run: build
