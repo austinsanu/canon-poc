@@ -25,8 +25,7 @@ pipeline {
 		         junit '**/target/*.xml'
 	 	       }
      }
-	
-	 
+		 
 	 stage('SonarQuality Analsis')
 	 {
            	// rtMaven.run pom: 'pom.xml', goals: 'sonar:sonar -Dsonar.projectKey=austinsanu_canon-poc -Dsonar.organization=austinsanu-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=01782f6ecb3cad38557ad815638d8a4a4da11986'
