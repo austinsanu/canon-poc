@@ -10,7 +10,7 @@ pipeline {
 	     		git url: 'https://github.com/austinsanu/canon-poc.git', branch: 'Test'
 		        }
      }
-      
+     /* 
 	   stage('Exec Maven-Build') 
      {  	steps {
                  	// rtMaven.tool = 'M2'
@@ -40,7 +40,8 @@ pipeline {
 			sh 'mvn goals: sonar:sonar -Dsonar.projectKey=austinsanu_canon-poc -Dsonar.organization=austinsanu-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=01782f6ecb3cad38557ad815638d8a4a4da11986'	
 	  				} 
 		  	}
-	  }		 
+	  }	
+	  */
   }         
         
 }
