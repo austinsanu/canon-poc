@@ -7,8 +7,8 @@ pipeline {
 	}
  stages 
  { 
-     timeout(time:5, unit:'MINUTES') {	 
 	 stage('Example') {
+	    timeout(time:5, unit:'MINUTES') {
             input {
                 message "Should we continue?"
                 ok "Yes, we should."
@@ -21,8 +21,8 @@ pipeline {
             steps {
                 echo "Hello, ${PERSON}, nice to meet you."
             }
-        }
- }	 
+          } // timeout
+       }  // stage	 
 	 
 	   stage('Access GitHub') 
      { 		 steps {
