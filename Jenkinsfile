@@ -17,11 +17,10 @@ pipeline {
                     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
                 }
 	      }
-                
+	    } //timeout   
             steps {
                 echo "Hello, ${PERSON}, nice to meet you."
             }
-          } // timeout
        }  // stage	 
 	 
 	   stage('Access GitHub') 
