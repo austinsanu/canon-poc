@@ -1,6 +1,6 @@
 pipeline {
  agent any
- def rtMaven.tool = 'M2'
+ // def rtMaven.tool = 'M2'
  stages 
  { 
 	   stage('Access GitHub') 
@@ -15,7 +15,8 @@ pipeline {
      {  	steps {
                  	// rtMaven.tool = 'M2'
 	     		sh "echo 'Under Maven Build stage'"
-	              	rtMaven.run pom: 'pom.xml', goals: 'clean verify build package javadoc:javadoc '
+	              	// rtMaven.run pom: 'pom.xml', goals: 'clean verify build package javadoc:javadoc '
+	     		sh 'mvn clean package'
 	              	archiveArtifact artfacts: '**/target/*.war', fingerprint: true
 	              }
      }
@@ -35,7 +36,8 @@ pipeline {
            		// def sonarqube -Dsonar.host.url='https://sonarcloud.io'
           		withSonarQubeEnv('SonarCloud') {
               		// rtMaven.run pom: 'pom.xml', goals: 'clean package sonar:sonar -Dsonar.projectKey=austinsanu_canon-poc -Dsonar.organization=austinsanu-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=01782f6ecb3cad38557ad815638d8a4a4da11986'
-              		rtMaven.run pom: 'pom.xml', goals: 'sonar:sonar -Dsonar.projectKey=austinsanu_canon-poc -Dsonar.organization=austinsanu-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=01782f6ecb3cad38557ad815638d8a4a4da11986'
+              		// rtMaven.run pom: 'pom.xml', goals: 'sonar:sonar -Dsonar.projectKey=austinsanu_canon-poc -Dsonar.organization=austinsanu-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=01782f6ecb3cad38557ad815638d8a4a4da11986'
+			sh 'mvn goals: sonar:sonar -Dsonar.projectKey=austinsanu_canon-poc -Dsonar.organization=austinsanu-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=01782f6ecb3cad38557ad815638d8a4a4da11986'	
 	  				} 
 		  	}
 	  }		 
