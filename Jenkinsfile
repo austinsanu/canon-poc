@@ -34,7 +34,8 @@ pipeline {
      }
 	 stage('SonarQuality-Analysis')
 	 { steps {
-		 sh 'mvn goals: sonar:sonar -Dsonar.projectKey=austinsanu_canon-poc -Dsonar.organization=austinsanu-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=01782f6ecb3cad38557ad815638d8a4a4da11986'	
+		 sh "echo 'Inside SonarAnalysis ...'"
+		 sh 'mvn  sonar:sonar -Dsonar.projectKey=austinsanu_canon-poc -Dsonar.organization=austinsanu-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=01782f6ecb3cad38557ad815638d8a4a4da11986'	
 	 	}
 	 }		 
 	  
