@@ -8,7 +8,7 @@ pipeline {
  stages 
  { 
 	 stage('Example') {
-	    timeout(time:5, unit:'MINUTES') {
+	   // timeout(time:5, unit:'MINUTES') {
             input {
                 message "Should we continue?"
                 ok "Yes, we should."
@@ -17,7 +17,7 @@ pipeline {
                     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
                 }
 	      }
-	    } //timeout   
+	 //   } timeout   
             steps {
                 echo "Hello, ${PERSON}, nice to meet you."
             }
