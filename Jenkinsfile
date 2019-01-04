@@ -1,11 +1,17 @@
 pipeline {
  agent any
  // def rtMaven.tool = 'M2'
+	tools {
+		maven 'Maven 3.0.5'
+		jdk 'jdk8'
+	}
  stages 
  { 
 	   stage('Access GitHub') 
      { 		 steps {
                 	sh "echo 'Accessing GitHub ...'"
+	     		echo "PATH = ${PATH}"
+                    	echo "M2_HOME = ${M2_HOME}"
                 	git url: 'https://github.com/austinsanu/canon-poc.git', branch: '2018-November-Sprint'
 	     		// git url: 'https://github.com/austinsanu/canon-poc.git', branch: 'Test'
 		        }
