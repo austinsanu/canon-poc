@@ -32,7 +32,8 @@ pipeline {
 	     		// git url: 'https://github.com/austinsanu/canon-poc.git', branch: 'Test'
 		        }
      }
-     
+ 
+	 
 	   stage('Exec Maven-Build') 
      {  	steps {
                  	// rtMaven.tool = 'M2'
