@@ -2,8 +2,8 @@ pipeline {
  agent any
  // def rtMaven.tool = 'M2'
 	tools {
-		maven 'Maven 3.0.5'
-		jdk 'jdk8'
+		maven 'M2'
+		//jdk 'jdk8'
 	}
  stages 
  { 
