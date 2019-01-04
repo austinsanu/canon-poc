@@ -22,9 +22,16 @@ pipeline {
                  	// rtMaven.tool = 'M2'
 	     		sh "echo 'Under Maven Build stage'"
 	              	// rtMaven.run pom: 'pom.xml', goals: 'clean verify build package javadoc:javadoc '
-	     		sh 'mvn clean package'
-	              	archiveArtifact artfacts: '**/target/*.war', fingerprint: true
+	     		// sh 'mvn clean package'
+	     		sh 'mvn -Dmaven.test.failure.ignore=true install javadoc:javadoc'
+	              	// archiveArtifact artfacts: '**/target/*.war', fingerprint: true
 	              }
+      		post {
+			success {
+				junit 'target/surefire-reports/**/*.xml'
+			}
+		}	
+	      
      }
 	  
   }         
