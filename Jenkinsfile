@@ -7,21 +7,21 @@ pipeline {
 	}
  stages 
  { 
-	 stage('Example') {
+	// stage('Example') {
 	   // timeout(time:5, unit:'MINUTES') {
-            input {
-                message "Should we continue?"
-                ok "Yes, we should."
-                submitter "alice,bob,any user,jenkins"
-                parameters {
-                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-                }
-	      }
+          //  input {
+          //      message "Should we continue?"
+          //      ok "Yes, we should."
+          //      submitter "alice,bob,any user,jenkins"
+          //      parameters {
+          //          string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+          //      }
+	  //    }
 	 //   } timeout   
-            steps {
-                echo "Hello, ${PERSON}, nice to meet you."
-            }
-       }  // stage	 
+          //  steps {
+          //      echo "Hello, ${PERSON}, nice to meet you."
+          //  }
+      // }   stage	 
 	 
 	   stage('Access GitHub') 
      { 		 steps {
@@ -55,8 +55,37 @@ pipeline {
 		 sh "echo 'Inside SonarAnalysis ...'"
 		 sh 'mvn  sonar:sonar -Dsonar.projectKey=austinsanu_canon-poc -Dsonar.organization=austinsanu-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=01782f6ecb3cad38557ad815638d8a4a4da11986'	
 	 	}
-	 }		 
+	 }
+	 
+	 
+	 stage('Publish') {
+            steps {
+                script {
+                    def proceed = true
+                    try {
+                        timeout(time:5, unit:'MINUTES') {
+                            input(message: 'Deploy this build to QA?')
+                        }
+                    } catch (err) {
+                        proceed = false
+                    }
+                    if(proceed) {
+                         sh "echo 'Deploying to QA Env ......'"
+                    }
+                }
+            }
+        }
+	
+	  post {
+    		aborted {
+      			script {
+        			currentBuild.result = 'SUCCESS'
+      				}
+    			}
+ 		 }
+	 
+	 
 	  
-  }         
+  }     // stages   
         
-}            
+}     // pipleline      
