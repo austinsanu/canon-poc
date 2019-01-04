@@ -75,6 +75,7 @@ pipeline {
                 }
             }
         }
+  }     // stages 
 	
 	  post {
     		aborted {
@@ -85,8 +86,6 @@ pipeline {
  		 }
 	 	 
 	  
-	 
-	 
-  }     // stages   
+	   
         
 }     // pipleline      
