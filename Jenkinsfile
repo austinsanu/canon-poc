@@ -1,6 +1,5 @@
 pipeline {
  agent any
- // def rtMaven.tool = 'M2'
 	tools {
 		maven 'M2'
 		//jdk 'jdk8'
